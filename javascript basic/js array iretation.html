@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+
+<p>Call a function once for each array element:</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo").innerHTML = txt;
+
+function myFunction(value) {
+  txt += value + "<br>"; 
+}
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+document.getElementById("demo1").innerHTML = numbers2;
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+const arr=[1,2,3,4,5,6];
+const flat=arr.flatmap((x)=x*4);
+document.write(flat);
+
+
+</script>
+
+</body>
+</html>
